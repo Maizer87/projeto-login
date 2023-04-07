@@ -29,13 +29,13 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /*tudo q estiver fora da borda esconde*/
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.771);
+    transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease; /*suavizar transição*/
 }
@@ -59,5 +59,79 @@ div#formulario > h1 {
 }
 
 div#formulario > p {
+    font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: #5f2c82;
+    display: block; /*atoua div já é display block*/
+    width: 100%; /*atoua div já é 100%*/
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
+    padding: 4px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    height: 90%;
+    border: 0px;
+    border-radius: 8px;
+    width: calc(100% - 46px);    
+    transform: translateY(-9px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%; /*100% da largura da DIV, se for 100vw dá pepino pq vai pegar o width da página*/
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #2d6462;
+}
+
+form > a.button {
+    display: block;
+    background-color: white;
+    border: 1px solid #49a09d;;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #2d6462;
+    height: 40px;
+    padding: 5px 0px;    
+    margin: 5px 0px;
+    font-size: 1em;
+}
+
+form > a.button:hover {
+    background-color: #6cd3cf;
+}
+
+form > a.button > i {
     font-size: 0.8em;
 }
